@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Analysis Results</title>
+</head>
+<body>
+    <h1>Stock Analysis Results</h1>
+    {% for stock, data in results.items() %}
+    <h2>{{ stock }}</h2>
+    <table border="1">
+        <tr>
+            <th>Date</th>
+            <th>Close</th>
+            <th>MA20</th>
+            <th>Upper Band</th>
+            <th>Lower Band</th>
+            <th>RSI</th>
+            <th>MACD</th>
+            <th>Signal Line</th>
+            <th>Suggestion</th>
+        </tr>
+        {% for index, row in data.iterrows() %}
+        <tr>
+            <td>{{ index }}</td>
+            <td>{{ row['Close'] }}</td>
+            <td>{{ row['MA20'] }}</td>
+            <td>{{ row['Upper Band'] }}</td>
+            <td>{{ row['Lower Band'] }}</td>
+            <td>{{ row['RSI'] }}</td>
+            <td>{{ row['MACD'] }}</td>
+            <td>{{ row['Signal Line'] }}</td>
+            <td>{{ row['Suggestion'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endfor %}
+</body>
+</html>
