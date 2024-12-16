@@ -6,10 +6,10 @@ app = Flask(__name__)
 
 # Database Configuration
 DATABASE_CONFIG = {
-    "host": "your-rds-endpoint.amazonaws.com",  # RDS Endpoint
-    "database": "postgres",
-    "user": "postgres",
-    "password": "your-password",
+    "host": "tstdb.ctowkmkoseh7.ap-south-1.rds.amazonaws.com",  # RDS Endpoint
+    "database": "tstdb",
+    "user": "nvrps",
+    "password": "$riyansh0701",
     "port": "5432"
 }
 
